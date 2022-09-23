@@ -4,9 +4,9 @@ Mostra todos os numeros primos;
 Depois de mostrar os numeros diz quantos numeros primos havia.
 """
 
-
 if __name__ == '__main__':
- continuar = 's'
+    numero_prim = 0
+    continuar = 's'
 while continuar == 's':
     inicio = int(input('Insira o primeiro numero: '))
     fim = int(input('Insira o segundo numero: '))
@@ -18,6 +18,7 @@ while continuar == 's':
                     break
             else:
                 print(n)
-
+                numero_prim += 1
+    print(f'Quantidade de numeros primos:{numero_prim}')
     continuar = input('repetir [s | n]?')
 print(f'Adeus')
