@@ -5,21 +5,6 @@ Depois de mostrar os numeros diz quantos numeros primos havia.
 """
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
  continuar = 's'
 while continuar == 's':
@@ -29,7 +14,7 @@ while continuar == 's':
     for n in range(inicio, fim + 1):
         if n > 1:
             for j in range(2, n):
-                if (n % j == 0):
+                if n % j == 0:
                     break
             else:
                 print(n)
