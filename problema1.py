@@ -5,11 +5,11 @@ Depois de mostrar os numeros diz quantos numeros primos havia.
 """
 
 
-def numeros(num):
+def numeros(numero1,numero2):
     zeros = 0
-    for n in range(1, num + 1):
-        if num % n == 0:
-            zeros += 1
+    for n in range(numero1, numero2 + 1):
+        if n > 1:
+            for j
 
 
 if __name__ == '__main__':
