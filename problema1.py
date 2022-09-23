@@ -9,7 +9,9 @@ def numeros(numero1,numero2):
     zeros = 0
     for n in range(numero1, numero2 + 1):
         if n > 1:
-            for j
+            for j in range(2, n):
+                if( n % j==0):
+                    break
 
 
 if __name__ == '__main__':
@@ -19,7 +21,7 @@ if __name__ == '__main__':
         num2 = int(input("insira o segundo numero: "))
 
         if num2 >= num1:
-            print(f'Numeros primos: {num2} ')
+            print(f'Numeros primos: {numeros(num2)} ')
 
 
         continuar = input('Repetir [s | n]?  ')
