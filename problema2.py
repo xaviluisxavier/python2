@@ -5,32 +5,20 @@ Mostra aquela quantidade de numeros primos a partir do numero inicial.
 """
 
 
-def aritmetica(valor1, valor2, op='+'):
-
-    total = "Código de operação inválido"
-    if op == '+':
-        total = valor1 + valor2
-
-    if op == '-':
-        total = valor1 - valor2
-
-    if op == '/':
-        total = valor1 / valor2
-
-    if op == '*':
-        total = valor1 * valor2
-
-    return total
-
-
 if __name__ == '__main__':
-    nome = input("Como te chamas? ")
-    while True:
-        fator1 = float(input("Insira o primeiro numero: "))
-        fator2 = float(input("insira o segundo numero: "))
-        operacao = input("insira a operação [+ , - , :, *] ")
-        print(f' Olá {nome}, {fator1} {operacao} {fator2} = {aritmetica(fator1, fator2, operacao)}')
-        continuar = input('Repetir [s | n]?  ')
-        if continuar == 'n':
-            break
-    print(f'Adeus {nome}!')
+ numero_prim = 0
+ continuar = 's'
+while continuar == 's':
+    inicio = int(input('Insira o primeiro numero: '))
+    fim = int(input('Insira o segundo numero: '))
+
+    for n in range(inicio, fim + 1):
+        if n > 1:
+            for j in range(2, n):
+                if n % j == 0:
+                    break
+            else:
+                print(n)
+
+    continuar = input('repetir [s | n]?')
+print(f'Adeus')
