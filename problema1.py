@@ -4,7 +4,7 @@ Mostra todos os numeros primos;
 Depois de mostrar os numeros diz quantos numeros primos havia.
 """
 
-
+if __name__ == '__main__':
 numero_prim = 0
 continuar = 's'
 while continuar == 's':
