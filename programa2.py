@@ -11,7 +11,7 @@ def notas(valor):
         i = "B"
     if valor >= 80:
         i = "A"
-    if valor >= 100:
+    if valor > 100:
         i = "Erro"
 
     return i
