@@ -19,6 +19,7 @@ while continuar == 's':
                     break
             else:
                 print(n)
-
+                numero_prim += numero_prim 
+    print(numero_prim)
     continuar = input('repetir [s | n]?')
 print(f'Adeus')
