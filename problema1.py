@@ -5,24 +5,34 @@ Depois de mostrar os numeros diz quantos numeros primos havia.
 """
 
 
-def numeros(numero1,numero2):
-    zeros = 0
-    for n in range(numero1, numero2 + 1):
-        if n > 1:
-            for j in range(2, n):
-                if( n % j==0):
-                    break
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
-    continuar = 's'
-    while continuar == 's':
-        num1 = int(input("Insira o primeiro numero: "))
-        num2 = int(input("insira o segundo numero: "))
+ continuar = 's'
+while continuar == 's':
+    inicio = int(input('Insira o primeiro numero: '))
+    fim = int(input('Insira o segundo numero: '))
 
-        if num2 >= num1:
-            print(f'Numeros primos: {numeros(num2)} ')
+    for n in range(inicio, fim + 1):
+        if n > 1:
+            for j in range(2, n):
+                if (n % j == 0):
+                    break
+            else:
+                print(n)
 
-
-        continuar = input('Repetir [s | n]?  ')
-    print(f'Adeus!')
+    continuar = input('repetir [s | n]?')
+print(f'Adeus')
