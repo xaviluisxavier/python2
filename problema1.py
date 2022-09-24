@@ -5,8 +5,8 @@ Depois de mostrar os numeros diz quantos numeros primos havia.
 """
 
 if __name__ == '__main__':
-numero_prim = 0
-continuar = 's'
+ numero_prim = 0
+ continuar = 's'
 while continuar == 's':
     inicio = int(input('Insira o primeiro numero: '))
     fim = int(input('Insira o segundo numero: '))
