@@ -1,40 +1,43 @@
 """
 Peça ao utilizador para inserir uma frase
 Após o utilizador ter inderido a frase apresente:
- — Qual é o comprimento da frase inserida (incluindo espaços)
- — Quantas palavras tem a frase
- — Quantas vogais tem a frase
- — Quantas letras maiusculas tem a frase
- — Quantas letras minusculas tem a frase
- — Quantos numeros tem a frase
- — Apresente a frase invertida. Exemplo: A frase é 'Bom dia!' deve dar '!aid moB'
+ - Qual é o comprimento da frase inserida (incluindo espaços)
+ - Quantas palavras tem a frase
+ - Quantas vogais tem a frase
+ - Quantas letras maiusculas tem a frase
+ - Quantas letras minusculas tem a frase
+ - Quantos numeros tem a frase
+ - Apresente a frase invertida. Exemplo: A frase é 'Bom dia!' deve dar '!aid moB'
 """
-
+import re
 if __name__ == '__main__':
-    frase = input('Insira frase: ')
-    palavras = frase.split(' ')
+    frase_list = []
+    frase = str(input('Digite uma frase: '))
+    frase_list.append(frase)
+
+    num_palavras = len(frase.split(' '))
+    num_mai = 0
+    num_min = 0
     num_vogais = 0
-    maiusculas = 0
-    minusculas = 0
-    numeros = 0
-
-    vogais = 'aeiou'
-    for char in frase:
-        if char in vogais:
+    for x in range(len(frase)):
+        if (frase[x].islower()):
+            num_min += 1
+        elif (frase[x].isupper()):
+            num_mai += 1
+        if frase[x] == 'a' or frase[x] == 'e' or frase[x] == 'i' or frase[x] == 'o' or frase[x] == 'u' or frase[x] == 'A' or frase[x] == 'E' or frase[x] == 'I' or frase[x] == 'O' or frase[x] == 'U':
             num_vogais += 1
-        if char.isalpha() and char != ' ':
-            if char.islower():
-                minusculas += 1
-            else:
-                maiusculas += 1
-        elif char.isalnum():
-            numeros += 1
 
-    print(f'Comprimento: {len(frase)}')
-    print(f'Palavras: {len(palavras)}')
-    print(f'Vogais: {num_vogais}')
-    print(f'Maiusculas: {maiusculas}')
-    print(f'Minusculas: {minusculas}')
-    print(f'Números: {numeros}')
-    frase = frase[::-1]
-    print(frase)
+    num_letras = (num_mai + num_min)
+    num_consoantes = num_letras - num_vogais
+
+    print(f'A é frase escrita foi "{frase_list}"')
+    print(f'A frase contém {num_palavras} palavras')
+    print(f'A frase contém {num_letras} letras')
+    print(f'A frase contém {num_vogais} vogais')
+    print(f'A frase contém {num_consoantes} consoantes')
+    print(f'A frase contém {num_mai} letras maiusculas')
+    print(f'A frase contém {num_min} letras minusculas')
+    reversed_frase = ''
+    for i in reversed(frase):
+        reversed_frase += i
+    print(f'A é frase escrita quanto invertida fica "{reversed_frase}"')
