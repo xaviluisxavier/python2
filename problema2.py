@@ -4,22 +4,24 @@ Pede ao utilizador um numero que representa "quantos".
 Mostra aquela quantidade de numeros primos a partir do numero inicial.
 """
 
-if __name__ == '__main__':
-    numero_prim = 0
-    continuar = 's'
-while continuar == 's':
-    inicio = int(input('Insira o numero inicial: '))
-    qnt_primos = int(input('Insira quantidade de primos: '))
+def divisores(num):
+    zeros = 0
+    for n in range(1, num + 1):
+        if num % n == 0:
+            zeros += 1  # zeros = zeros + 1
+    return zeros
 
-    for n in range(inicio, 100):
-        if numero_prim < qnt_primos:
-            if n > 1:
-                for j in range(qnt_primos, n):
-                    if n % j == 0:
-                        break
-                else:
-                    print(n)
-                    numero_prim += 1
-        else:
-            break
-print(f'Adeus')
+
+if __name__ == '__main__':
+    continuar = 's'
+    while continuar == 's':
+        ini = int(input('Insira o número inicial: '))
+        quantos = int(input('Insira a quatnidade:  '))
+        primos = 0
+        for n in range(ini, quantos + 1):
+            if divisores(n) == 2:
+                primos += 1
+        print(f'A partir de {ini} até há quantidade pedida {quantos} há {primos} de primos.')
+        continuar = input('Repetir [s | n]? ')
+    print(f'Adeus!')
+
