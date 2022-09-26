@@ -3,35 +3,28 @@ Declare uma lista para guardar as vendas do grupo central
 Declara uma lista para guardar os nomes das cinco ilhas do grupo central
 Peça dados ao utilizador e guarde-os na lista
 Após o utilizador ter inserido os 5 valores apresente:
-— Total das vendas
-— O menor valor inserido
-— O maior valor inserido
-— A média das vendas
+- Total das vendas
+- O menor valor inserido
+- O maior valor inserido
+- A média das vendas
 """
 
+
 if __name__ == '__main__':
+  vendas_grupo_central = []
+  nome_ilhas_grupo_central = []
+  valores = 5
 
-    vendas = [0, 0, 0, 0, 0]
-    ilhas = ['Faial', 'Pico', 'S. Jorge', 'Graciosa', 'Terceira']
+  for x in range(0, valores):
+    num_vendas = int(input(f'Qual é o {x + 1}º número de vendas? '))
+    nome_ilha = str(input(f'Qual é a ilha do grupo central? '))
 
-    venda_total = 0
-    venda_menor = 0
-    venda_maior = 0
+    vendas_grupo_central.insert(x, num_vendas)
+    nome_ilhas_grupo_central.insert(x, nome_ilha)
 
-    for x in range(0, len(ilhas)):
-        vendas[x] = int(input(f'Vendas {ilhas[x]}: '))
-        venda_total += vendas[x]
-
-    venda_menor = vendas[0]
-    venda_maior = vendas[0]
-
-    for x in range(0, len(vendas)):
-        if vendas[x] > venda_maior:
-            venda_maior = vendas[x]
-        if vendas[x] < venda_menor:
-            venda_menor = vendas[x]
-
-    print(f'Total de vendas: {venda_total}')
-    print(f'A menor venda é: {venda_menor}')
-    print(f'A maior venda é: {venda_maior}')
-    print(f'A média é: {venda_total / len(ilhas)}')
+  print(f'\nVendas - {vendas_grupo_central}')
+  print(f'Ilhas - {nome_ilhas_grupo_central}')
+  print(f'Total de vendas é {sum(vendas_grupo_central)}')
+  print(f'Menor vendas foi {min(vendas_grupo_central)}')
+  print(f'Maior vendas foi {max(vendas_grupo_central)}')
+  print(f'Média de vendas foi {sum(vendas_grupo_central) / len(vendas_grupo_central)}')
