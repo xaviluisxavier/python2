@@ -19,20 +19,13 @@ if __name__ == '__main__':
 
     menor = vendas[0]
     maior = vendas[0]
-    for x in range(1, len(vendas)):
-        if vendas[x] < menor:
-            menor = vendas[x]
-        if vendas[x] > maior:
-            maior = vendas[x]
-    print(f'O maior é {maior} e o menor é {menor}.')
+
     print(f'O maior é {max(vendas)} e o menor é {min(vendas)}.')
-    print(f'O maior é {sorted(vendas)[4]} e o menor é {sorted(vendas)[0]}.')
 
     total = 0
     for v in vendas:
         total += v
 
     media = total / len(vendas)
-
 
     print(f'O total é {sum(vendas)} e a média é {media}.')
