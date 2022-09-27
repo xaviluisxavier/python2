@@ -9,35 +9,90 @@ Após o utilizador ter inderido a frase apresente:
  - Quantos numeros tem a frase
  - Apresente a frase invertida. Exemplo: A frase é 'Bom dia!' deve dar '!aid moB'
 """
-import re
+
 if __name__ == '__main__':
-    frase_list = []
-    frase = str(input('Digite uma frase: '))
-    frase_list.append(frase)
+    vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    frase = input('Insere uma frase: ')
+    x = 0
+    for c in frase:
+        x += 1
 
-    num_palavras = len(frase.split(' '))
-    num_mai = 0
-    num_min = 0
+    print(f'A frase tem {x} caracters = {len(frase)}')
+
     num_vogais = 0
-    for x in range(len(frase)):
-        if (frase[x].islower()):
-            num_min += 1
-        elif (frase[x].isupper()):
-            num_mai += 1
-        if frase[x] == 'a' or frase[x] == 'e' or frase[x] == 'i' or frase[x] == 'o' or frase[x] == 'u' or frase[x] == 'A' or frase[x] == 'E' or frase[x] == 'I' or frase[x] == 'O' or frase[x] == 'U':
+    for c in frase:
+        if c in vogais:
             num_vogais += 1
+    print(f'A frase tem {num_vogais} vogais.')
 
-    num_letras = (num_mai + num_min)
-    num_consoantes = num_letras - num_vogais
+    novafrase = frase.split(' ')
+    print(novafrase)
+    print(len(novafrase))
 
-    print(f'A é frase escrita foi "{frase_list}"')
-    print(f'A frase contém {num_palavras} palavras')
-    print(f'A frase contém {num_letras} letras')
-    print(f'A frase contém {num_vogais} vogais')
-    print(f'A frase contém {num_consoantes} consoantes')
-    print(f'A frase contém {num_mai} letras maiusculas')
-    print(f'A frase contém {num_min} letras minusculas')
-    reversed_frase = ''
-    for i in reversed(frase):
-        reversed_frase += i
-    print(f'A é frase escrita quanto invertida fica "{reversed_frase}"')
+    maiusculas = 0
+    minusculas = 0
+    for c in frase:
+        if c != ' ':
+            if c == c.upper():
+                maiusculas += 1
+            if c == c.lower():
+                minusculas += 1
+    print(f'A frase tem {minusculas} minusculas e {maiusculas} maisculas.')
+
+    osnums = 0
+    nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    for c in frase:
+        if c in nums:
+            osnums += 1
+    print(f'Tem {osnums} numeros')
+
+    osnums = 0
+    nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    for c in frase:
+        try:
+            if int(c) in nums:
+                osnums += 1
+        except:
+            pass
+    print(f'v2Tem {osnums} numeros')
+
+
+    invertido = []
+    for c in frase:
+        invertido.append(c)
+
+    nova = invertido
+
+    qtd = len(invertido) - 1
+
+    for c in frase:
+        nova[qtd] = c
+        qtd -= 1
+
+    print(f'nova = {nova}')
+    print(f"nova = {''.join(nova)}")
+
+
+
+    print(f'frase = {frase}')
+    print(f'invertido = {invertido}')
+
+
+
+
+
+
+
+"""
+    continuar = 's'
+    while continuar == 's':
+        ini = int(input('Insira o número inicial '))
+        fim = int(input('Insira o número final '))
+        primos = 0
+        for n in range(ini, fim + 1):
+            if divisores(n) == 2:
+                primos += 1
+        print(f'Entre {ini} e {fim} há {primos} de primos.')
+        continuar = input('Repetir [s | n]? ')
+    print(f'Adeus!')
+"""

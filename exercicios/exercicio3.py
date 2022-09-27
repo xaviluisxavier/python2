@@ -1,11 +1,20 @@
 """
 Complete o programa
+Pergunte ao utilizador quantos números quer
 Pergunte ao utilizador qual é o intervalo para obter numeros aleatórios
 Pergunte se deseja ver apenas pares, apenas impares ou apenas primos
 Mostre todos os números aleatórios
 Mostre todos os números que satisfazem o pedido do utilizador
 """
 import random
+
+
+def divisores(num):
+    zeros = 0
+    for nn in range(1, num + 1):
+        if num % nn == 0:
+            zeros += 1  # zeros = zeros + 1
+    return zeros
 
 
 def get_random(ini, fim):
@@ -15,51 +24,37 @@ def get_random(ini, fim):
     :param fim: fim do intervalo
     :return: número aleatório
     """
-
     return random.randrange(ini, fim + 1)
 
 
-def par(num):
-  return num % 2 == 0
-
-
-def impar(num):
-  return num % 2 != 0
-
-
 if __name__ == '__main__':
-  num_ini = int(input(f'Qual é o número inicial? '))
-  num_end = int(input(f'Qual é o número final? '))
-  opcao = int(input(f'Qual opção deseja [par - 1, impar - 2, primo - 3]? '))
+    while True:
+        try:
+            quantos = int(input('Quantos? '))
+            break
+        except ValueError:
+            print('Insere valores válidos!')
 
-  num_random = 0
-  list_random = []
-  list_random_par = []
-  list_random_impar = []
-  list_random_primo = []
+    while True:
+        try:
+            ini = int(input('Valor inicial? '))
+            fim = int(input('Valor final? '))
+            if fim < ini:
+                print("O valor final não pode ser menor que o inicial")
+                continue
+            break
+        except:
+            print('Insere valores válidos')
 
-  for x in range(num_ini, num_end + 1):
-    num_random = get_random(num_ini, num_end)
-
-    list_random.insert(x, num_random)
-
-    if opcao == 1:
-      if par(num_random):
-        list_random_par.insert(x, num_random)
-
-    elif opcao == 2:
-      if impar(num_random):
-        list_random_impar.insert(x, num_random)
-
-    elif opcao == 3:
-      if impar(num_random):
-        list_random_primo.insert(x, num_random)
-
-  print(f'Lista {list_random}')
-
-  if opcao == 1:
-    print(f'Lista Par {list_random_par}')
-  elif opcao == 2:
-    print(f'Lista Impar {list_random_impar}')
-  elif opcao == 3:
-    print(f'Lista Primos {list_random_primo}')
+    for num in range(quantos):
+        numero = get_random(ini, fim)
+        print(numero)
+        if numero % 2 == 0:
+            out1 = f'O numero {numero} é par'
+        else:
+            out1 = f'O numero {numero} é impar'
+        if divisores(numero)  == 2:
+            out2 = 'e primo'
+        else:
+            out2 = ''
+        print(f'{out1} {out2}')
