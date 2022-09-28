@@ -57,6 +57,6 @@ if __name__ == '__main__':
         for y in range(5):  # 0, 1, 2, 3, 4
             # print(f'vendas[{x}][{y}] = {vendas[x][y]}')  # mostra as celulas x e y
             total_vendas = total_vendas + vendas[x][y]  # total das vendas
-            total_linha = total_linha + vendas[x][y] # total de cada linha
+            total_linha = total_linha + vendas[x][y]  # total de cada linha
         print(f'total_linha = {total_linha}')
     print(f'total_vendas = {total_vendas}')
