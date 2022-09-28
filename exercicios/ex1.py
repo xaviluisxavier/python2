@@ -6,6 +6,8 @@ def maior(num1, num2):
 def menor(num1, num2):
     if num1 < num2:
         print(f'numero {num1} é menor')
+     elif:
+        print(f'numero {num2} é menor')
 
 
 def igual(num1, num2):
