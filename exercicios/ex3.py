@@ -1,6 +1,6 @@
 
 if __name__ == '__main__':
-    list_caracteres = ['.', '!', '?']
+    lista_caracteres = ['.', '!', '?']
     frase = ''
     x = 0
 
@@ -11,7 +11,7 @@ if __name__ == '__main__':
         if x < 10:
             print('A frase tem que ter mais de 10 caracteres.')
 
-        elif frase[y] in list_caracteres:
+        elif frase[y] in lista_caracteres:
             print('', end='')
         else:
             print('A frase tem que terminar com um deste pontos ".", "!", "?".')

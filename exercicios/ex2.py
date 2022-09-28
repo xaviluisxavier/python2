@@ -8,10 +8,11 @@ def comfor(num1, num2):
 
 def comwhile(num1, num2):
     soma = 0
-    n = 0
-    while n < (num1, num2 + 1):
+    n = num1
+    while n <= num2:
         soma += n
         n += 1
+
     return soma
 
 
