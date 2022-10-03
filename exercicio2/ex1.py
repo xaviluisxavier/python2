@@ -8,15 +8,20 @@ Escreva o segundo numero, y = 6
 O valor de (x + 3 * y) * (x - y) e: -23
 """
 
-x = 0
-y = 0
-c = (x + 3 * y) * (x - y)
+
+def operacao(valor1, valor2):
+    operacao = (valor1 + 3 * valor2) * (valor1 - valor2)
+
+    return operacao
+
 
 if __name__ == '__main__':
     print('Vou pedir-lhe dois numeros')
     print()
-    x = input(f'Escreva o primeiro numero: ')
-    y = input(f'Escreva o segundo numero: ')
 
-    print(f'O valor de ({x} + 3 * {y}) * ({x} - {y}) é: {c}')
+    x = int(input(f'Digite o primeiro numero: '))
+    y = int(input(f'Digite o segundo numero: '))
+
+    print(f'({x} + 3 × {y}) × ({x} - {y}) = {operacao(x, y)}')
+
 

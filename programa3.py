@@ -6,6 +6,7 @@ def parouimpar(num):
     if num == 0:
         return f'erro'
 
+
 if __name__ == '__main__':
     while True:
         numero = float(input("Insira o numero: "))
