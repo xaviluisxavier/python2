@@ -1,6 +1,6 @@
 """
 20. Escreva um programa em Python escreve o seguinte:
-1x8+1=9
+1 x 8 + 1 = 9
 12 x 8 + 2 = 98
 123 x 8 + 3 = 987
 1234 x 8 + 4 = 9876
