@@ -27,6 +27,14 @@ def dia(valor):
 
 
 if __name__ == '__main__':
-    segundos = int(input('Escreva o numero de segundos:  '))
+    while True:
+        try:
 
-    print(f'O número de dias correspondente é {dia(segundos)} dias.')
+            segundos = int(input('Quantas segundos? '))
+
+            print(f'{segundos} segundos correspondem a {dia(segundos)} dias.')
+
+            if segundos < 0:
+                break
+        except ValueError:
+            print('Digite um valor válido')

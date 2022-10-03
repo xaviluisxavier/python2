@@ -6,6 +6,8 @@ Escreva um inteiro positivo
 ? 7633256
 O número invertido é 6523367
 """
+
+
 def numero(valor):
     valor = str(valor)
     numero = valor[::-1]
@@ -14,7 +16,6 @@ def numero(valor):
 
 
 if __name__ == '__main__':
+    num = int(input('Qual é o número? '))
 
-        num = int(input('Qual é o número? '))
-
-        print(f'O número invertido é {numero(num)}.')
+    print(f'O número invertido é {numero(num)}.')
