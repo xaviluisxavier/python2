@@ -1,5 +1,5 @@
 """
-- Um programa que lê um número inteiro correspondente a um certo número de segundos e que escreve
+4-  Um programa que lê um número inteiro correspondente a um certo número de segundos e que escreve
 o número de dias, horas, minutos, segundos correspondentes a esse número. Por exemplo:
     * Escreve o número de segundos 345678
     * dias : 4 horas: 0 mins: 1 segs: 18

@@ -6,6 +6,7 @@ Escreva um inteiro
 O numero tem 3 zeros seguidos
 """
 
+
 def countZeros(numero):
     count = 0;
     while numero % 10 == 0:

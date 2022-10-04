@@ -3,6 +3,7 @@
 maior dos números lidos.
 """
 
+
 def nummaior(valor1, valor2, valor3):
     maior = 0
     if num1 > num2 and num1 > num3:
@@ -16,9 +17,8 @@ def nummaior(valor1, valor2, valor3):
 
 
 if __name__ == '__main__':
+    num1 = int(input('Qual é o primeiro número? '))
+    num2 = int(input('Qual é o segundo número? '))
+    num3 = int(input('Qual é o terceiro número? '))
 
-            num1 = int(input('Qual é o primeiro número? '))
-            num2 = int(input('Qual é o segundo número? '))
-            num3 = int(input('Qual é o terceiro número? '))
-
-            print(f'O maior número é {nummaior(num1, num2,num3)}.')
+    print(f'O maior número é {nummaior(num1, num2, num3)}.')

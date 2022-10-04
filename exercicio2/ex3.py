@@ -1,5 +1,5 @@
 """
-- Um programa que pede ao utilizador que lhe forneça um inteiro correspondente a
+3- Um programa que pede ao utilizador que lhe forneça um inteiro correspondente a
 um número de segundos e que calcula o número de dias correspondentes a esse número
 de segundos.
     * Escreve um número de segundos

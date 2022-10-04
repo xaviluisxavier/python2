@@ -13,14 +13,13 @@ def media_km(valor1, valor2):
 
     return media
 
-def media_m(valor1,valor2):
+
+def media_m(valor1, valor2):
     valor1 = valor2 / 1000
     valor2 = valor2 * 60
     media = valor1 / valor2
 
     return media
-
-
 
 
 if __name__ == "__main__":
@@ -29,6 +28,5 @@ if __name__ == "__main__":
 
     print(f'{distancia}(Km) : {tempo}(min) = {media_km(distancia, tempo)} km/h')
     print(f'{distancia}(Km) : {tempo}(min) = {media_m(distancia, tempo)} m/s')
-
 
     print(f"A velocidade média é: {tempo} km/h")
