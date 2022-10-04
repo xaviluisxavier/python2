@@ -6,25 +6,13 @@ Escreva um número
 347743
 """
 
-
-def numero(valor):
-    valor = str(valor)
-    numero = valor + valor[::-1]
-
-    return numero
-
-
 if __name__ == '__main__':
-    while True:
-        try:
-            num = int(input('Qual é o número? '))
-
-            print(f'O número é {numero(num)}.')
-
-            continuar = input('Repetir (s | n)? ')
-            if continuar == 'n':
-                break
-
-        except ValueError:
-            print('Digite uma valor válido')
+    num = input('introduza um numero: ')
+    inver = []
+    inver1 = []
+    cont = len(num)
+    for x in range(len(num)):
+        cont -= 1
+        inver.append(num[cont])
+    print(f'{num}{"".join((inver))}')
 
