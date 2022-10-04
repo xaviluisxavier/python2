@@ -16,6 +16,7 @@ Num -> 8
 8 x 10 = 80
 """
 
+
 def cal(valor):
     for x in range(1, 11):
         mult = valor * x
@@ -34,5 +35,4 @@ if __name__ == '__main__':
                 break
 
         except ValueError:
-            print('Digite um valor válido')
-
+            print("Valor invalido")

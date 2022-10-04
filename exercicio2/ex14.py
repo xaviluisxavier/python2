@@ -2,6 +2,7 @@
 14. Escreva um programa que lê um inteiro e calcula a soma dos seus dígitos.
 """
 
+
 def digito(valor):
     digitos = len(str(valor))
 
@@ -21,4 +22,3 @@ if __name__ == '__main__':
 
         except ValueError:
             print('Digite um valor válido')
-

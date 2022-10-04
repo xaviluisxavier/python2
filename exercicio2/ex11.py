@@ -7,15 +7,21 @@ Escreva um inteiro positivo
 O número invertido é 6523367
 """
 
-
-def numero(valor):
-    valor = str(valor)
-    numero = valor[::-1]
-
-    return numero
-
-
 if __name__ == '__main__':
-    num = int(input('Qual é o número? '))
+    while True:
+        try:
+            num = input('Digite um numero: ')
+            numstr = str(num)
+            tm = len(numstr)
+            strfim = ''
 
-    print(f'O número invertido é {numero(num)}.')
+            for i in range(0, tm):
+                tm -= 1
+                strfim += numstr[tm]
+            print(strfim)
+
+            continuar = input('Repetir (s | n)? ')
+            if continuar == 'n':
+                break
+        except ValueError:
+            print("Valor invalido")
